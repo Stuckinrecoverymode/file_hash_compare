@@ -1,6 +1,8 @@
 # file_hash_compare
-comparing  two of file hashes 
+Comparing  two of file hashes with very basic console program.
 
 supported hash cheksum types:
 
-sha256, sha512
+// sha-1,sha256,sha224,sha384,sha512,md5,crc32,crc64
+
+
