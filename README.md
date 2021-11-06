@@ -5,5 +5,5 @@ supported hash cheksum types:
 
 // sha-1, sha256, sha224, sha384, sha512, md5, crc32, crc64.
 
-Compile it mingw or cygwin and run it :)
+Compile it with mingw or cygwin and run it :)
 
