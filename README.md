@@ -1,5 +1,5 @@
 # file_hash_compare
-Comparing  two of file hashes with very basic console program.
+Comparing  two file hashes with very basic console program.
 
 supported hash cheksum types:
 
