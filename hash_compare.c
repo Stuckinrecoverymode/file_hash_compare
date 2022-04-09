@@ -9,9 +9,8 @@ int i,j=0;
 int main(int argc, char const *argv[]) {
   printf("Supported cheksum types: \n");
   printf("sha-1,sha256,sha224,sha384,sha512,md5,crc32,crc64.\n");
-
   printf("\nPlease enter a validated hash value: \n\n");fgets(hash, sizeof(hash), stdin);
-  printf("\nPlease enter a hash you want to compare: \n\n");gets(hash2);
+  printf("\nPlease enter a hash you want to compare: \n\n");fgets(hash2, sizeof(hash2), stdin);
 
 while (strlen(hash) > 0) {
 if (strlen(hash) != strlen(hash2)) {
@@ -44,5 +43,5 @@ return 0;
   else
   printf("\n\nPlease download your file again!");
 
-  getch();
+  getchar();
 }
