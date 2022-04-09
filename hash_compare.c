@@ -3,15 +3,28 @@
 #include <string.h>
 //8crc32 ,16crc64,40sha-1,64sha256,128sha512,56sha224,96sha384,32md5
 
+// gets function is dangerous DONT use it!!!
 char hash[129],hash2[129];
 int i,j=0;
 
 int main(int argc, char const *argv[]) {
   printf("Supported cheksum types: \n");
   printf("sha-1,sha256,sha224,sha384,sha512,md5,crc32,crc64.\n");
-  printf("\nPlease enter a validated hash value: \n\n");fgets(hash, sizeof(hash), stdin);
-  printf("\nPlease enter a hash you want to compare: \n\n");fgets(hash2, sizeof(hash2), stdin);
+  printf("\nPlease enter a validated hash value: \n\n");
+  fgets(hash, sizeof(hash), stdin);
+  printf("\nPlease enter a hash you want to compare: \n\n");
+  fgets(hash2, sizeof(hash2), stdin);
 
+  // stdin means standard input
+  //gets(hash2);
+  //printf("%s", hash);
+  // initializer element is not constant so we cannot place len variable out of main block
+// removing unnecessary /n that fgets creates.
+  int len = strlen(hash);
+if (len > 0 && hash[len-1] && hash2[len-1] == '\n')
+  hash[len-1] = '\0';
+  hash2[len-1] = '\0';
+  
 while (strlen(hash) > 0) {
 if (strlen(hash) != strlen(hash2)) {
   printf("Please enter a same length values!\n");
