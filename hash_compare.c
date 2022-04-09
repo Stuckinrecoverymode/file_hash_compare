@@ -16,7 +16,6 @@ int main(int argc, char const *argv[]) {
   fgets(hash2, sizeof(hash2), stdin);
 
   // stdin means standard input
-  //gets(hash2);
   //printf("%s", hash);
   // initializer element is not constant so we cannot place len variable out of main block
 // removing unnecessary /n that fgets creates.
