@@ -1,7 +1,6 @@
 // dosya hash karsilastirma
 #include <stdio.h>
 #include <string.h>
-#include <conio.h>
 //8crc32 ,16crc64,40sha-1,64sha256,128sha512,56sha224,96sha384,32md5
 
 char hash[129],hash2[129];
@@ -11,7 +10,7 @@ int main(int argc, char const *argv[]) {
   printf("Supported cheksum types: \n");
   printf("sha-1,sha256,sha224,sha384,sha512,md5,crc32,crc64.\n");
 
-  printf("\nPlease enter a validated hash value: \n\n");gets(hash);
+  printf("\nPlease enter a validated hash value: \n\n");fgets(hash, sizeof(hash), stdin);
   printf("\nPlease enter a hash you want to compare: \n\n");gets(hash2);
 
 while (strlen(hash) > 0) {
