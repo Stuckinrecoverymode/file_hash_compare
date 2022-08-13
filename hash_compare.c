@@ -32,8 +32,8 @@ if (strlen(hash) != strlen(hash2)) {
  break;
 }
 
-while (strlen(hash) > 8) {
-if (strlen(hash) == 16 || strlen(hash) == 32 || strlen(hash) == 56 ||
+while (strlen(hash) >= 0) {
+if (strlen(hash) == 8 || strlen(hash) == 16 || strlen(hash) == 32 || strlen(hash) == 56 ||
 strlen(hash) == 96 || strlen(hash) == 64 || strlen(hash) == 40
  || strlen(hash) == 128){
 break;
